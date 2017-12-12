@@ -9,6 +9,7 @@ class Transfer
   end
 
   def valid?(account)
+    
   end
 
 
