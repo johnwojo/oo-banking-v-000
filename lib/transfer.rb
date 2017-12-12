@@ -7,7 +7,6 @@ class Transfer
     @receiver = receiver
     @status = "pending"
     @amount = amount
-    @@all << @amount
   end
 
   def valid?
@@ -15,15 +14,12 @@ class Transfer
   end
 
   def execute_transaction
-    if @sender.status == "closed" || @sender.balance < 0
-      return "Transaction rejected. Please check your account balance."
-    elsif
-      @@all.include? @amount
-      return "Transaction rejected. Please check your account balance."
-    else
+    if @sender.status == "open" || @sender.balance > 0
       @sender.balance = @sender.balance - @amount
       @receiver.balance = @receiver.balance + @amount
       @status = "complete"
+    else
+      return "Transaction rejected. Please check your account balance."
       end
     end
 
