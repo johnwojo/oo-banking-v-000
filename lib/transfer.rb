@@ -34,5 +34,5 @@ class Transfer
     @sender.balance += @@all.last
     @receiver.balance -= @@all.last
   end
-
+binding.pry
 end
