@@ -8,8 +8,8 @@ class Transfer
     @amount = amount
   end
 
-  def valid?(account)
-    if sender.valid? && receiver.valid? 
+  def valid?
+    if sender.valid? && receiver.valid?
       true
     else
       false
