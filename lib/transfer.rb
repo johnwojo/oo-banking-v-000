@@ -20,6 +20,7 @@ class Transfer
     elsif
       @@all.include? @amount
       return "cats life"
+    else
       @sender.balance = @sender.balance - @amount
       @receiver.balance = @receiver.balance + @amount
       @status = "complete"
