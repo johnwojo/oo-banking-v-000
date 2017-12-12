@@ -9,6 +9,11 @@ class Transfer
     @amount = amount
   end
 
+  def self.all
+    @@all
+  end
+
+    
   def valid?
     sender.valid? && receiver.valid? ? true : false
   end
