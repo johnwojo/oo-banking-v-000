@@ -8,7 +8,6 @@ class Transfer
     @receiver = receiver
     @status = "pending"
     @amount = amount
-    @@all << @amount
   end
 
   def self.all
@@ -29,7 +28,6 @@ class Transfer
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
-      binding.pry
     end
 
   def reverse_transfer
