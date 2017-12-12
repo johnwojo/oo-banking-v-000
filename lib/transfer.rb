@@ -4,11 +4,11 @@ class Transfer
   @@all = []
 
   def initialize(sender,receiver,amount)
+    @@all << @amount
     @sender = sender
     @receiver = receiver
     @status = "pending"
     @amount = amount
-    @@all << @amount
   end
 
   def self.all
