@@ -25,7 +25,8 @@ class Transfer
   end
 
   def reverse_transfer
-
+    @sender.balance += @@all.last 
+    @receiver.balance -= @@all.last
   end
 
 end
