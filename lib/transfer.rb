@@ -9,7 +9,10 @@ class Transfer
   end
 
   def valid?(account)
-    
+    if sender.valid? && receiver.valid? 
+      true
+    else
+      false
   end
 
 
