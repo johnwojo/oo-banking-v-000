@@ -22,7 +22,6 @@ class Transfer
     else
       puts "Transaction rejected. Please check your account balance."
     end
-    binding.pry
   end
 
 
