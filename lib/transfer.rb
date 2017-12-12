@@ -7,6 +7,7 @@ class Transfer
     @receiver = receiver
     @status = "pending"
     @amount = amount
+    @@all << @amount
   end
 
   def valid?
