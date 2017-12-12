@@ -29,11 +29,11 @@ class Transfer
       return "Transaction rejected. Please check your account balance."
       end
       @@all << @amount
+      binding.pry
     end
 
   def reverse_transfer
     @sender.balance += @@all.last
     @receiver.balance -= @@all.last
   end
-binding.pry
 end
