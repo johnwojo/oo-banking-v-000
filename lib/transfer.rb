@@ -26,7 +26,7 @@ class Transfer
       @receiver.balance = @receiver.balance + @amount
       @status = "complete"
     elsif @@all.include?(@amount)
-
+      return @balance
 
 
     else
