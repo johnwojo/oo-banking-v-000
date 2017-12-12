@@ -1,4 +1,4 @@
-require 'pry'
+
 class Transfer
   attr_accessor :status, :sender, :receiver, :amount
   @@all = []
@@ -24,5 +24,8 @@ class Transfer
     end
   end
 
+  def reverse_transfer
+    
+  end
 
 end
