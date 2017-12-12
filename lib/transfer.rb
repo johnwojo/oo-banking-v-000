@@ -1,5 +1,6 @@
 class Transfer
   attr_accessor :status, :sender, :receiver, :amount
+  @@all = []
 
   def initialize(sender,receiver,amount)
     @sender = sender
@@ -18,6 +19,7 @@ class Transfer
       @receiver.balance = @receiver.balance + @amount
       @status = "complete"
     else
+    end
   end
 
 end
