@@ -1,4 +1,3 @@
-
 class Transfer
   attr_accessor :status, :sender, :receiver, :amount
   @@all = []
@@ -19,13 +18,14 @@ class Transfer
       @sender.balance = @sender.balance - @amount
       @receiver.balance = @receiver.balance + @amount
       @status = "complete"
+      @@all = []
     else
       puts "Transaction rejected. Please check your account balance."
     end
   end
 
   def reverse_transfer
-    
+
   end
 
 end
